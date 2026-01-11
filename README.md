@@ -37,3 +37,23 @@ The FastAPI server provides the following API routes:
 - `POST /tasks`: Adds a task to the task list. The request body should contain the task details.
 
 - `GET /tasks`: Retrieves the task list.
+---
+
+# Node.js Server (Express)
+
+This project also includes a Node.js server implemented with Express as part of the migration from FastAPI.
+
+## Project Structure (Node.js)
+
+- `node-server/src/server.js`: Express server implementation with `/tasks` routes.
+- `node-server/package.json`: Node.js dependencies and scripts.
+- `node-server/nodemon.json`: Nodemon configuration for development.
+- `node-server/Dockerfile`: Dockerfile to run the Node.js server.
+
+## Running the Node.js Server
+
+### Locally
+```bash
+cd node-server
+yarn install
+yarn start
