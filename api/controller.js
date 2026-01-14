@@ -12,11 +12,12 @@ exports.calculate = function(req, res) {
 
   // TODO: Add operator
 var operations = {
-  'add':      (a, b) => Number(a) + Number(b),
-  'subtract': (a, b) => a - b,
-  'multiply': (a, b) => a * b,
-  'divide':   (a, b) => a / b,
-  'power':    (a, b) => Math.pow(Number(a), Number(b))
+  add:      (a, b) => Number(a) + Number(b),
+  subtract: (a, b) => a - b,
+  multiply: (a, b) => a * b,
+  divide:   (a, b) => a / b,
+  power:    (a, b) => Math.pow(Number(a), Number(b)),
+  '^':      (a, b) => Math.pow(Number(a), Number(b))
 };
 
 
