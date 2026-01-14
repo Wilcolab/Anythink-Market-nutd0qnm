@@ -15,3 +15,8 @@ if (!module.parent) {
 }
 
 module.exports = app;
+
+// function to multiply two numbers
+function multiply(a, b) {
+    return a * b;
+}
