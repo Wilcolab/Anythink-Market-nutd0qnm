@@ -15,7 +15,6 @@ var state = states.start;
 var operand1 = 0;
 var operand2 = 0;
 var operation = null;
-
 function calculate(operand1, operand2, operation) {
     var uri = location.origin + "/arithmetic";
 
@@ -32,6 +31,9 @@ function calculate(operand1, operand2, operation) {
             break;
         case '/':
             uri += "?operation=divide";
+            break;
+        case '^':
+            uri += "?operation=power";
             break;
         default:
             setError();
@@ -138,7 +140,7 @@ document.addEventListener('keypress', (event) => {
         numberPressed(event.key);
     } else if (event.key == '.') {
         decimalPressed();
-    } else if (event.key.match(/^[-*+/]$/)) {
+    } else if (event.key.match(/^[\+\-\*\/\^]$/)) {
         operationPressed(event.key);
     } else if (event.key == '=') {
         equalPressed();
