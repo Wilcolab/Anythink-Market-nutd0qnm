@@ -11,12 +11,14 @@ exports.calculate = function(req, res) {
   });
 
   // TODO: Add operator
-  var operations = {
-    'add':      function(a, b) { return Number(a) + Number(b) },
-    'subtract': function(a, b) { return a - b },
-    'multiply': function(a, b) { return a * b },
-    'divide':   function(a, b) { return a / b },
-  };
+var operations = {
+  'add':      (a, b) => Number(a) + Number(b),
+  'subtract': (a, b) => a - b,
+  'multiply': (a, b) => a * b,
+  'divide':   (a, b) => a / b,
+  'power':    (a, b) => Math.pow(Number(a), Number(b))
+};
+
 
   if (!req.query.operation) {
     throw new Error("Unspecified operation");
